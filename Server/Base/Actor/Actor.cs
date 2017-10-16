@@ -25,6 +25,11 @@ namespace Base.Actor
             mMails.Enqueue(msg);
             ActorDispacher.Instance.ReadyToHandle(this);
         }
+        public virtual void AddComponent<T>() where T:Component.Component
+        {
+            T c = default(T);
+            AddComponent(c);
+        }
         public virtual void AddComponent(Base.Component.Component cn)
         {
             if (!mComponets.Contains(cn))

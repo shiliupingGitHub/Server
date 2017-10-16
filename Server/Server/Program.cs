@@ -14,18 +14,14 @@ namespace Server
         static void Main(string[] args)
         {
             Base.HotFix.HotFix.Reload();
-            TestActor ta = new TestActor();
-            TestMessage tm = new TestMessage();
-            tm.mMsg = "start success";
-            ta.SendMsg(tm);    
+            ServerActor server = new ServerActor();
+            server.AddComponent<NetworkdComponent>(); 
             while(true)
             {
                string test =  System.Console.ReadLine();
                 if(test == "reload")
                 {
                     Base.HotFix.HotFix.Reload();
-                    tm.mMsg = "reaload sucess";
-                    ta.SendMsg(tm);
                 }
             }
         }
