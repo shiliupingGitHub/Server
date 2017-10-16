@@ -18,7 +18,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\Bin\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;STANDALONE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -53,6 +53,43 @@
     <Compile Include="common\SingleTon.cs" />
     <Compile Include="HotFix\HotFix.cs" />
     <Compile Include="message\TestMessage.cs" />
+    <Compile Include="Network\Common\DataNode.cs" />
+    <Compile Include="Network\Common\TNBuffer.cs" />
+    <Compile Include="Network\Common\TNDatagram.cs" />
+    <Compile Include="Network\Common\TNFieldOrProperty.cs" />
+    <Compile Include="Network\Common\TNList.cs" />
+    <Compile Include="Network\Common\TNPacket.cs" />
+    <Compile Include="Network\Common\TNPlayer.cs" />
+    <Compile Include="Network\Common\TNSerializer.cs" />
+    <Compile Include="Network\Common\TNServerList.cs" />
+    <Compile Include="Network\Common\TNTcpProtocol.cs" />
+    <Compile Include="Network\Common\TNTools.cs" />
+    <Compile Include="Network\Common\TNUdpProtocol.cs" />
+    <Compile Include="Network\Common\TNUPnP.cs" />
+    <Compile Include="Network\Common\TypeExtensions.cs" />
+    <Compile Include="Network\LZMA\CRC.cs" />
+    <Compile Include="Network\LZMA\ICoder.cs" />
+    <Compile Include="Network\LZMA\IMatchFinder.cs" />
+    <Compile Include="Network\LZMA\LzBinTree.cs" />
+    <Compile Include="Network\LZMA\LzInWindow.cs" />
+    <Compile Include="Network\LZMA\LZMA.cs" />
+    <Compile Include="Network\LZMA\LzmaBase.cs" />
+    <Compile Include="Network\LZMA\LzmaDecoder.cs" />
+    <Compile Include="Network\LZMA\LzmaEncoder.cs" />
+    <Compile Include="Network\LZMA\LzOutWindow.cs" />
+    <Compile Include="Network\LZMA\RangeCoder.cs" />
+    <Compile Include="Network\LZMA\RangeCoderBit.cs" />
+    <Compile Include="Network\LZMA\RangeCoderBitTree.cs" />
+    <Compile Include="Network\TNChannel.cs" />
+    <Compile Include="Network\TNFileServer.cs" />
+    <Compile Include="Network\TNGameServer.cs" />
+    <Compile Include="Network\TNLobbyLink.cs" />
+    <Compile Include="Network\TNLobbyServer.cs" />
+    <Compile Include="Network\TNTcpLobbyLink.cs" />
+    <Compile Include="Network\TNTcpLobbyServer.cs" />
+    <Compile Include="Network\TNTcpPlayer.cs" />
+    <Compile Include="Network\TNUdpLobbyLink.cs" />
+    <Compile Include="Network\TNUdpLobbyServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
