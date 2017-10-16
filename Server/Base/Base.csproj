@@ -46,6 +46,7 @@
     <Compile Include="Actor\ActorHandlerAttribute.cs" />
     <Compile Include="Actor\IActorHandler.cs" />
     <Compile Include="Actor\TestActor.cs" />
+    <Compile Include="Component\Component.cs" />
     <Compile Include="message\Message.cs" />
     <Compile Include="common\SingleTon.cs" />
     <Compile Include="HotFix\HotFix.cs" />

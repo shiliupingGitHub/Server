@@ -17,12 +17,30 @@ namespace Base.Actor
             PROCESSING,
             
         }
+        List<Base.Component.Component> mComponets = new List<Component.Component>();
         public STATUS Status { get; set; }
         public virtual void  SendMsg(Base.Message.Message msg)
         {
             msg.actor = this;
             mMails.Enqueue(msg);
             ActorDispacher.Instance.ReadyToHandle(this);
+        }
+        public virtual void AddComponent(Base.Component.Component cn)
+        {
+            if (!mComponets.Contains(cn))
+            {
+                mComponets.Add(cn);
+                cn.mActor = this;
+                cn.Awake();
+            }
+        }
+        public virtual void RemoveComponent(Base.Component.Component cn)
+        {
+            if(mComponets.Contains(cn))
+            {
+                mComponets.Remove(cn);
+                cn.OnDestory();
+            }
         }
         public virtual async void  OnMessage()
         {

@@ -16,14 +16,15 @@ namespace Server
             Base.HotFix.HotFix.Reload();
             TestActor ta = new TestActor();
             TestMessage tm = new TestMessage();
-            tm.mMsg = "hello world";
-            ta.SendMsg(tm);
+            tm.mMsg = "start success";
+            ta.SendMsg(tm);    
             while(true)
             {
                string test =  System.Console.ReadLine();
-                if(test == "r")
+                if(test == "reload")
                 {
                     Base.HotFix.HotFix.Reload();
+                    tm.mMsg = "reaload sucess";
                     ta.SendMsg(tm);
                 }
             }

@@ -12,6 +12,10 @@ namespace Base.HotFix
     {
         public static void Reload()
         {
+            ReloadDll();
+        }
+        static void ReloadDll()
+        {
             Base.HotFix.HotFix.LoadHotFix("HotFix.dll", "HotFix.pdb");
         }
         public static void LoadHotFix(string dllPath,string pdbPath)
